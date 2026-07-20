@@ -1,51 +1,28 @@
 services:
-  mongodb:
-    image: mongo:7
-    container_name: school_mongodb
-    restart: unless-stopped
-
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: 12345678
-      MONGO_INITDB_DATABASE: school_management
-
-    ports:
-      - "27017:27017"
-
-    volumes:
-      - mongodb_data:/data/db
-
-    networks:
-      - school_network
-
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
 
-    container_name: school_backend
+    container_name: school_management_ideal-cms-backend
 
     restart: unless-stopped
 
-    depends_on:
-      - mongodb
-
-    environment:
-      MONGO_URL: mongodb://admin:12345678@mongodb:27017/?authSource=admin
-      DB_NAME: school_management
+    env_file:
+      - ./backend/.env
 
     ports:
-      - "8000:8000"
+      - "8015:8000"
 
     networks:
-      - school_network
+      - ideal-cms-network
 
   frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile
 
-    container_name: school_frontend
+    container_name: school_management_ideal-cms-frontend
 
     restart: unless-stopped
 
@@ -53,17 +30,14 @@ services:
       - backend
 
     environment:
-      REACT_APP_BACKEND_URL: http://localhost:8000
+      REACT_APP_BACKEND_URL: http://localhost:8015
 
     ports:
-      - "3000:80"
+      - "3015:80"
 
     networks:
-      - school_network
-
-volumes:
-  mongodb_data:
+      - ideal-cms-network
 
 networks:
-  school_network:
+  ideal-cms-network:
     driver: bridge
