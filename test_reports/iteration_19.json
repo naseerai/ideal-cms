@@ -1,0 +1,24 @@
+{
+  "summary": "Verified calendar event class/section scoping — backend GET /api/events filters correctly (class-1/section-A gets both scoped+wide; class-2/section-B gets only wide; no filter returns both). Parent dashboard endpoint /api/parent/dashboard/{id} correctly returns school-wide + matching class/section events and excludes other-class events. sendNotification with no matching students returns 200. Frontend Add-Event dialog exposes event-class and event-section dropdowns; scoped event renders as sky pill with 'LKG-A' badge and toast 'Event added (Class LKG-A)'; school-wide event renders as amber pill with no badge and toast 'Event added (school-wide)'. All seeded events cleaned up.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {"ui_bugs": [], "integration_issues": [], "design_issues": []},
+  "test_report_links": [
+    "/app/backend/tests/test_event_scoping.py",
+    "/app/test_reports/pytest/iteration_19_pytest.xml"
+  ],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "Note: request said parent endpoint is /api/parent-dashboard/{studentId}; actual route is /api/parent/dashboard/{student_id}. Not a bug — just make sure UI/docs match.",
+    "Event dialog does not disable the 'Add Event' submit button while an API request is in-flight; rapid double-clicks could create duplicate events.",
+    "Section dropdown is disabled only until a class is picked; if a class has no sections defined it still shows the trigger. Minor UX polish only."
+  ],
+  "updated_files": [
+    "/app/backend/tests/test_event_scoping.py"
+  ],
+  "success_rate": {"backend": "100% (5/5)", "frontend": "100% (2/2 flows)"},
+  "test_credentials": "admin / 12345678",
+  "seed_data_creation": "Events seeded during tests are auto-cleaned up (both backend fixture teardown and UI delete loop). Backend test creates events with class '1' section 'A' and school-wide equivalents.",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Real classes in this DB are 'LKG' and 'CLASS-5TH'; if writing UI tests, pick from those options. Backend accepts any string for studentClass/section. Parent dashboard route is /api/parent/dashboard/{id}, not /api/parent-dashboard/{id}."
+}

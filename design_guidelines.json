@@ -1,0 +1,119 @@
+{
+  "theme": {
+    "archetype": "ARCHETYPE 6: Vibrant Play mixed with ARCHETYPE 4: Swiss & High-Contrast (Light Theme)",
+    "description": "A vibrant, energetic, yet structured dashboard designed for school administration. Prioritizes friendly aesthetics (rounded corners, bright primary colors) while maintaining the crisp data clarity needed for complex tasks like fee management and attendance tracking."
+  },
+  "typography": {
+    "primary_font": "Nunito",
+    "secondary_font": "Figtree",
+    "hierarchy": {
+      "h1": "text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900",
+      "h2": "text-2xl sm:text-3xl font-bold tracking-tight text-slate-800",
+      "h3": "text-xl sm:text-2xl font-bold tracking-tight text-slate-800",
+      "h4": "text-lg font-semibold text-slate-800",
+      "body": "text-base font-medium text-slate-600",
+      "small": "text-sm font-medium text-slate-500",
+      "overline": "text-xs font-bold uppercase tracking-widest text-slate-400"
+    }
+  },
+  "colors": {
+    "backgrounds": {
+      "app_bg": "bg-slate-50",
+      "card_bg": "bg-white",
+      "sidebar_bg": "bg-white border-r border-slate-200"
+    },
+    "brand": {
+      "primary": "bg-sky-500 hover:bg-sky-600 text-white",
+      "primary_light": "bg-sky-100 text-sky-700",
+      "secondary": "bg-amber-400 hover:bg-amber-500 text-slate-900",
+      "secondary_light": "bg-amber-100 text-amber-800"
+    },
+    "status": {
+      "present": "bg-emerald-500 text-white",
+      "present_light": "bg-emerald-100 text-emerald-700",
+      "absent": "bg-rose-500 text-white",
+      "absent_light": "bg-rose-100 text-rose-700",
+      "holiday": "bg-orange-400 text-white",
+      "holiday_light": "bg-orange-100 text-orange-800",
+      "info": "bg-indigo-500 text-white"
+    },
+    "text": {
+      "primary": "text-slate-900",
+      "secondary": "text-slate-600",
+      "muted": "text-slate-400",
+      "inverted": "text-white"
+    },
+    "borders": {
+      "default": "border-slate-200",
+      "focus": "focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
+    }
+  },
+  "spacing_and_layout": {
+    "dashboard_container": "p-6 sm:p-8 max-w-[1600px] mx-auto space-y-8",
+    "bento_grid": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6",
+    "card_padding": "p-6",
+    "border_radius": {
+      "card": "rounded-2xl",
+      "button": "rounded-xl",
+      "input": "rounded-xl",
+      "pill": "rounded-full"
+    },
+    "shadows": {
+      "card": "shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-shadow duration-300",
+      "dropdown": "shadow-lg"
+    }
+  },
+  "components": {
+    "buttons": "Always use font-bold. Add 'active:scale-95 transition-transform' for a playful tactile feel. Primary CTA uses bg-sky-500, secondary/warning uses bg-amber-400.",
+    "cards": "Use 'bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-slate-100'. Always add 'p-6'.",
+    "tables": "Use Shadcn Table. Make header row 'bg-slate-50 text-slate-600 font-bold uppercase text-xs tracking-wider'. Rows hover effect: 'hover:bg-slate-50/80'.",
+    "forms": "Use Shadcn Form primitives. Inputs must be 'rounded-xl border-slate-200 h-12'.",
+    "tabs": "Use Shadcn Tabs. Override list style to 'bg-slate-100 p-1 rounded-xl'. Trigger 'data-[state=active]:bg-white data-[state=active]:shadow-sm rounded-lg'.",
+    "pills": "For status indicators, use 'inline-flex items-center px-3 py-1 rounded-full text-xs font-bold'.",
+    "icons": "Use 'lucide-react' for all functional icons. Size them typically to 'w-5 h-5'."
+  },
+  "interactions_and_motion": {
+    "hover_states": "Buttons and Cards must have a slight lift '-translate-y-0.5' and shadow increase on hover.",
+    "transitions": "Use 'transition-all duration-200 ease-in-out' globally.",
+    "modals": "Dialog overlays should use 'backdrop-blur-sm bg-slate-900/20'."
+  },
+  "media_and_assets": {
+    "login_background": {
+      "url": "https://images.unsplash.com/photo-1774992822548-5e046d3f4ca9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHw0fHxjb2xvcmZ1bCUyMGFic3RyYWN0JTIwYmFja2dyb3VuZCUyMHBhc3RlbHxlbnwwfHx8fDE3NzU4ODc0MDZ8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract pastel circular pattern, perfect for login screen background or dashboard welcome banner."
+    },
+    "welcome_banner": {
+      "url": "https://images.unsplash.com/photo-1762503203730-ca33982518af?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwxfHxjb2xvcmZ1bCUyMGFic3RyYWN0JTIwYmFja2dyb3VuZCUyMHBhc3RlbHxlbnwwfHx8fDE3NzU4ODc0MDZ8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Swirl of blue, pink, yellow. Use as a background pattern for the top 'Welcome Back' dashboard card with bg-opacity or mix-blend mode."
+    },
+    "student_avatars": [
+      "https://images.pexels.com/photos/8617732/pexels-photo-8617732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "https://images.unsplash.com/photo-1611181355758-089959e2cfb2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwyfHxzdHVkZW50JTIwcG9ydHJhaXQlMjBzbWlsaW5nfGVufDB8fHx8MTc3NTg4NzQwMnww&ixlib=rb-4.1.0&q=85",
+      "https://images.pexels.com/photos/14075585/pexels-photo-14075585.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "https://images.unsplash.com/photo-1752650733356-f4cf951a3623?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwzfHxzdHVkZW50JTIwcG9ydHJhaXQlMjBzbWlsaW5nfGVufDB8fHx8MTc3NTg4NzQwMnww&ixlib=rb-4.1.0&q=85"
+    ],
+    "empty_state_illustration": {
+      "url": "https://images.unsplash.com/photo-1682977690252-2df0f6ccc9ff?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwzfHxzdGF0aW9uZXJ5JTIwZmxhdCUyMGxheSUyMGNvbG9yZnVsfGVufDB8fHx8MTc3NTg4NzQwNnww&ixlib=rb-4.1.0&q=85",
+      "description": "Stationery flat lay. Use for empty states like 'No homework assigned yet'."
+    },
+    "school_building": {
+      "url": "https://images.unsplash.com/photo-1731865745081-4aeb28e2bc57?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwyfHxjb2xvcmZ1bCUyMG1vZGVybiUyMHNjaG9vbCUyMGJ1aWxkaW5nfGVufDB8fHx8MTc3NTg4NzQwNnww&ixlib=rb-4.1.0&q=85",
+      "description": "Hallway with red/yellow walls. Can be used for School Info section."
+    }
+  },
+  "instructions_to_main_agent": {
+    "general": [
+      "Follow the 'Vibrant Play' archetype but with absolute data clarity. Avoid muddy colors.",
+      "Use Shadcn UI components but heavily customize their classes to match the rounded, soft-shadowed, vibrant look specified in spacing_and_layout and colors.",
+      "Ensure all interactive elements have data-testid attributes (e.g., data-testid='student-add-btn').",
+      "Install required fonts from Google Fonts: Nunito and Figtree."
+    ],
+    "modules_guidance": {
+      "student_management": "Use a wide data table. For 'Bulk Upload', use a drag-and-drop zone with dashed border-sky-300 and a vibrant upload icon. Add action buttons for 'Promote Student' using secondary (amber) color.",
+      "attendance_management": "Two main tabs: 'Take Attendance' and 'View Attendance'. Use vibrant pills for marking: emerald-500 (Present), rose-500 (Absent), orange-400 (Holiday). For 'WhatsApp SMS via API', MOCKED the integration in the UI with a toast notification 'WhatsApp SMS Sent'.",
+      "fee_management": "Form for roll number entry. Term 1/2/3 must be presented in a horizontal card layout. When 'UPI' is selected, conditionally render a vibrant file upload box for screenshot. MOCKED the WhatsApp receipt API. Include an 'Expenses' section in a separate tab with a file upload for bills.",
+      "inventory_event_homework": "Implement functional views using the Bento grid or list views. For Event Calendar, use Shadcn calendar scaled up or a grid layout with vibrant dots for events. Homework module should have 'Add Assignment' with due dates.",
+      "dashboard_home": "Create a high-impact top row with 4 bento metric cards (Total Students, Present Today, Total Fees, Pending Tasks). Use the welcome_banner background with a dark overlay and white text for a 'Good Morning, Admin' section."
+    }
+  }
+}
